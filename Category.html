@@ -1,0 +1,42 @@
+<!-- categoryMaster.vash -->
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<head>
+    <title>Category Master</title>
+    <!-- Include necessary CSS and JavaScript files -->
+</head>
+<body>
+    <h1>Category Master</h1>
+
+    <!-- Category form for CRUD operations -->
+    <form id="categoryForm" action="/category" method="POST">
+        <!-- Input fields for category details -->
+        <input type="text" name="categoryName" placeholder="Category Name">
+        <button type="submit">Add</button>
+        <button><a href="index1.html">Product</a></button>
+    </form>
+    
+
+    <!-- Table to display category list -->
+    <table id="categoryTable">
+        <thead>
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Category rows will be dynamically added here -->
+            <div id="categoryList"></div>
+        </tbody>
+    </table>
+
+    <!-- Include necessary JavaScript files and scripts -->
+    <script>
+        fetchCategories();
+    </script>
+</body>
+</html>
