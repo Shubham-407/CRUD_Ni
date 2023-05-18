@@ -1,0 +1,15 @@
+mysql> create database vash;
+
+mysql> use vash;
+
+mysql> CREATE TABLE categories (
+    ->   categoryId INT PRIMARY KEY AUTO_INCREMENT,
+    ->   categoryName VARCHAR(255) NOT NULL);
+
+mysql> CREATE TABLE products (
+    ->   productId INT PRIMARY KEY AUTO_INCREMENT,
+    ->   productName VARCHAR(255) NOT NULL,
+    ->   categoryId INT,
+    ->   FOREIGN KEY (categoryId) REFERENCES categories(categoryId));
+	
+	
