@@ -1,0 +1,45 @@
+<!-- productMaster.vash -->
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script1.js"></script>
+<head>
+    <title>Product Master</title>
+    <!-- Include necessary CSS and JavaScript files -->
+</head>
+<body>
+    <h1>Product Master</h1>
+
+    <!-- Product form for CRUD operations -->
+    <form id="productForm" action="/product" method="POST">
+        <!-- Input fields for product details -->
+        <input type="text" name="productName" placeholder="Product Name">
+        <select name="categoryId">
+            <!-- Options for selecting a category -->
+        </select>
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- Table to display product list -->
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category Name</th>
+                <th>Category ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product rows will be dynamically added here -->
+            <div id="productList"></div>
+        </tbody>
+    </table>
+
+    <!-- Include necessary JavaScript files and scripts -->
+    <script>
+       fetchProducts();
+    </script>
+</body>
+</html>
